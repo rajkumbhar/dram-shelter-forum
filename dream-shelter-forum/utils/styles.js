@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   appBar: {
     backgroundColor: 'darkgreen',
     boxShadow: 'none',
@@ -10,9 +10,30 @@ const useStyles = makeStyles({
     minHeight: '80vh',
   },
   quesCard: {
-    marginTop: '1%',
-    maxWidth: '30%',
+    marginTop: 10,
+    marginBottom: 10,
   },
-});
+  hideCard: {
+    marginTop: 10,
+    marginBottom: 10,
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+  },
+  textInput: {
+    width: '100%',
+  },
+  askButton: {
+    marginBottom: '2%',
+    marginTop: '3%',
+    float: 'right',
+  },
+  headerIcons: {
+    marginLeft: '20px',
+  },
+  answerCard: {
+    marginBottom: '1%',
+  },
+}));
 
 export default useStyles;

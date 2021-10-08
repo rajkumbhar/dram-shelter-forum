@@ -26,7 +26,7 @@ const Search = styled('div')(({ theme }) => ({
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
-  width: '100%',
+  ///width: '100%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(5),
     width: 'auto',
@@ -192,6 +192,7 @@ export default function Header({ children }) {
               size="large"
               aria-label="show 4 new mails"
               color="inherit"
+              className={classes.headerIcons}
             >
               <Badge badgeContent={4} color="error">
                 <MailIcon />
@@ -201,6 +202,7 @@ export default function Header({ children }) {
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
+              className={classes.headerIcons}
             >
               <Badge badgeContent={87} color="error">
                 <NotificationsIcon />
@@ -214,6 +216,7 @@ export default function Header({ children }) {
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
               color="inherit"
+              className={classes.headerIcons}
             >
               <AccountCircle />
             </IconButton>
