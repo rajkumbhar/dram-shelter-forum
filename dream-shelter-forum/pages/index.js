@@ -15,6 +15,8 @@ import useStyle from '../utils/styles';
 import { TextField } from '@mui/material';
 import Question from '../components/Question';
 import Answer from '../components/Answer';
+import UserSuggestion from '../components/UserSuggestion';
+import Topics from '../components/Topics';
 
 export default function Home() {
   const classes = useStyle();
@@ -23,7 +25,9 @@ export default function Home() {
       <Grid container spacing={1}>
         <Grid item md={3} className={classes.hideCard}>
           <Card>
-            <CardContent>Topics goes here</CardContent>
+            <CardContent>
+              <Topics></Topics>
+            </CardContent>
           </Card>
         </Grid>
         <Grid item md={6} xs={12}>
@@ -32,12 +36,21 @@ export default function Home() {
           </Grid>
           <Grid className={classes.answerCard}>
             <Answer />
+            <br />
+            <Answer />
           </Grid>
         </Grid>
 
         <Grid item md={3} xs={12} className={classes.quesCard}>
           <Card>
-            <CardContent>friends suggestion goes here</CardContent>
+            <CardContent>
+              <Typography gutterBottom variant="subtitle2" component="div">
+                Friends with similar interest like you
+              </Typography>
+              <UserSuggestion />
+              <UserSuggestion />
+              <UserSuggestion />
+            </CardContent>
           </Card>
         </Grid>
       </Grid>
