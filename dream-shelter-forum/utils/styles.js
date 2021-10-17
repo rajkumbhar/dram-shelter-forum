@@ -34,6 +34,13 @@ const useStyles = makeStyles((theme) => ({
   answerCard: {
     marginBottom: '1%',
   },
+  actionCardIcons: {
+    marginLeft: '20px',
+  },
+  chips: {
+    margin: '10%',
+    color: 'green',
+  },
 }));
 
 export default useStyles;

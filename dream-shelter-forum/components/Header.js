@@ -19,7 +19,7 @@ import { Container, CssBaseline, ThemeProvider } from '@material-ui/core';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
-  borderRadius: theme.shape.borderRadius,
+  borderradius: theme.shape.borderradius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),

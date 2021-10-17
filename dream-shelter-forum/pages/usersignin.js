@@ -16,9 +16,14 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+    <Typography
+      variant="body2"
+      style={{ color: 'secondary' }}
+      align="center"
+      {...props}
+    >
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link style={{ color: 'inherit' }} href="https://material-ui.com/">
         www.dreamshelter.com
       </Link>{' '}
       {new Date().getFullYear()}
@@ -53,7 +58,9 @@ export default function SignInSide() {
             backgroundImage: 'url(https://source.unsplash.com/random)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
-              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
+              t.palette.mode === 'light'
+                ? t.palette.grey[50]
+                : t.palette.grey[900],
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -71,13 +78,18 @@ export default function SignInSide() {
             <Typography component="h1" variant="h5">
               Dream Shelter
             </Typography>
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <Avatar sx={{ m: 1, bgcolor: 'secondary' }}>
               <AccessAlarmIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <Box
+              component="form"
+              noValidate
+              onSubmit={handleSubmit}
+              sx={{ mt: 1 }}
+            >
               <TextField
                 margin="normal"
                 required
@@ -99,7 +111,9 @@ export default function SignInSide() {
                 autoComplete="current-password"
               />
               <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
+                control={
+                  <Checkbox value="remember" style={{ color: 'primary' }} />
+                }
                 label="Remember me"
               />
               <Button
