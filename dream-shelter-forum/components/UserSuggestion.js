@@ -15,15 +15,31 @@ import ModeCommentRoundedIcon from '@mui/icons-material/ModeCommentRounded';
 import ShareRoundedIcon from '@mui/icons-material/ShareRounded';
 import { Info } from '@mui/icons-material';
 import Add from '@material-ui/icons/Add';
+import customTheme, {
+  customShadow,
+  shadow,
+  colorShadows,
+} from '../utils/theme';
+import Box from '@mui/material/Box';
 
 export default function UserSuggestion() {
+  console.log(customTheme);
   const classes = useStyle();
   return (
     <>
-      <Card p={1.5} gap={2} bgcolor={'#f5f5f5'} borderradius={16}>
+      <Card
+        style={{
+          boxShadow: customShadow.gray[10],
+        }}
+      >
         <CardHeader
           avatar={
-            <Avatar sx={{ bgcolor: 'blue' }} aria-label="recipe">
+            <Avatar
+              style={{
+                backgroundColor: customTheme.palette.warning.main,
+              }}
+              aria-label="recipe"
+            >
               S
             </Avatar>
           }
@@ -36,6 +52,16 @@ export default function UserSuggestion() {
           subheader="September 14, 2016"
         />
       </Card>
+      <Button
+        variant="contained"
+        style={{
+          backgroundColor: customTheme.palette.error.main,
+          color: '#fff',
+          boxShadow: customShadow.error[10],
+        }}
+      >
+        Secondary
+      </Button>
       <br />
     </>
   );

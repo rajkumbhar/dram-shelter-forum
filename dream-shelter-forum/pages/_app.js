@@ -3,7 +3,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import App from 'next/app';
 import Head from 'next/head';
 import React from 'react';
-import theme from './theme';
+import theme from '../utils/theme';
 
 export default class MyApp extends App {
   componentDidMount() {
@@ -21,7 +21,10 @@ export default class MyApp extends App {
       <React.Fragment>
         <Head>
           <title>My page</title>
-          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+          <meta
+            name="viewport"
+            content="minimum-scale=1, initial-scale=1, width=device-width"
+          />
         </Head>
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}

@@ -17,6 +17,7 @@ import Question from '../components/Question';
 import Answer from '../components/Answer';
 import UserSuggestion from '../components/UserSuggestion';
 import Topics from '../components/Topics';
+import shadows from '../utils/shadows';
 
 export default function Home() {
   const classes = useStyle();
