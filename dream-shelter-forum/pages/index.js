@@ -17,7 +17,7 @@ import Question from '../components/Question';
 import Answer from '../components/Answer';
 import UserSuggestion from '../components/UserSuggestion';
 import Topics from '../components/Topics';
-import theme from './theme';
+import theme from '../utils/theme';
 
 export default function Home() {
   console.log(theme);
